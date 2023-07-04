@@ -1,0 +1,38 @@
+<header>
+  <!-- Header Bottom -->
+  <div class="header">
+    <div class="container">
+      <span routerLink="/" class="logo dis-flex clickable">
+        <img src="../../../../assets/img/logo.jpg" alt="image" />
+      </span>
+      <ul class="nav-list" [class.open-menu]="hamClick">
+        <li
+          *ngFor="let i of navLink"
+          class="nav-item"
+          [routerLink]="i.link"
+          routerLinkActive="active"
+          (click)="closeMenu()"
+        >
+          {{ i.name }}
+        </li>
+      </ul>
+
+      <div class="mobile-view dis-flex">
+        <div class="get-started">
+          <button class="btn prim-btn" routerLink="/auth/signin">
+            Get Started
+          </button>
+        </div>
+
+        <!-- Hamburger menu -->
+        <div
+          class="toggle-menu"
+          (click)="openMenu()"
+          [class.open-menu]="hamClick"
+        >
+          <span class="menu-bar"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

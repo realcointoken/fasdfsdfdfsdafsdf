@@ -1,0 +1,90 @@
+/* About Hero starts */
+.about-hero {
+  position: relative;
+  color: var(--white-color);
+  text-align: center;
+  padding: 6rem 0;
+}
+.about-hero .hero-video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  z-index: -10;
+  visibility: visible;
+}
+.about-hero h1 {
+  line-height: 70px;
+}
+/* About Hero ends */
+
+/* About grey-bg starts */
+.about-grey-bg {
+  background-color: var(--grey-color1);
+  text-align: center;
+}
+/* About gery-bg ends */
+
+/* About pillars starts */
+.about-pillars .heading {
+  text-align: center;
+}
+.about-pillars .heading h2 {
+  margin-bottom: 1rem;
+}
+.about-pillars .heading .images {
+  justify-content: space-around;
+  margin: 3rem 0;
+}
+
+.about-pillars .heading .images span:not(:last-child) {
+  margin-right: 5rem;
+}
+.about-pillars .heading img {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 1rem;
+}
+.about-pillars .details {
+  padding: 1.5rem 0;
+  border-top: 1px solid rgb(230, 230, 230);
+  border-bottom: 1px solid rgb(230, 230, 230);
+  display: grid;
+  grid-gap: 2rem;
+}
+@media only screen and (min-width: 450px) {
+  .about-pillars .details {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+.about-pillars .details .details-col-1,
+.about-pillars .details .details-col-2 {
+  flex-basis: 45%;
+}
+.about-pillars .details p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.about-pillars .certified {
+  padding: 1.5rem 0;
+}
+.about-pillars .certified img {
+  margin-right: 2rem;
+}
+
+/* About about-pillars ends */
+
+/* About join-mission starts */
+.about-join-mission h3 {
+  margin-bottom: 0.5rem;
+}
+.about-join-mission a {
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+/* About join-mission ends */
+
+/* About join-mission starts */
+/* About join-mission ends */

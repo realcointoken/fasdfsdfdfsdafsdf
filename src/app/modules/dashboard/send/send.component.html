@@ -1,0 +1,100 @@
+<section class="">
+  <!-- Acount banner -->
+  <div class="account-banner">
+    <div class="account-banner-bg">
+      <div class="cover-image">
+        <h2>Hi, Welcome back!</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="plan-card">
+    <div class="plan-card-item" *ngFor="let i of plans">
+      <!-- Plan Card Front -->
+      <div class="plan-card-side plan-card-front" [class.show]="planPreview">
+        <h4 class="uc">{{ i.title }}</h4>
+        <div>
+          <ul>
+            <li>Min. Possible Deposit {{ i.minPosDepo }}</li>
+            <li>Max. Possible Deposit : {{ i.maxPosDepo }}</li>
+            <li>{{ i.minReturn }} Minimum return</li>
+          </ul>
+        </div>
+        <a class="btn sec-btn" (click)="openPlanPreview($event)">Invest</a>
+      </div>
+      <!-- Plan preview -->
+      <div class="plan-card-side plan-card-preview" [class.show]="planPreview">
+        <h4 class="uc">Investment Preview</h4>
+        <div class="plan-card-preview-body">
+          <h5 class="plan-card-preview-body-head">Account Balance $0</h5>
+          <form class="plan-card-preview-body-form">
+            <input type="text" placeholder="Enter amount" id="amount" />
+            <select name="" class="paymentMethod">
+              <option value="">Select payment method</option>
+              <option value="Btc">Btc</option>
+              <option value="Etherum">Etherum</option>
+              <option value="Usdt">Usdt</option>
+            </select>
+            <div>
+              <button
+                class="btn prim-btn investBtn"
+                (click)="openDepositModal($event)"
+                #investBtn
+              >
+                Invest
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Invest plan Modal -->
+      <div class="plan-invest-area" [class.show-modal]="depositModal">
+        <div class="plan-invest" #deposit>
+          <h3 class="plan-invest-head">Deposit fund from your account</h3>
+          <div class="plan-invest-body">
+            <h5 class="heading">Account Balance $0</h5>
+            <div class="body">
+              <img
+                src="https://www.svgrepo.com/show/15468/send.svg"
+                alt="send"
+              />
+              <div class="body-details">
+                <div class="user-details">
+                  <p><span class="uc">Name:</span> {{ user?.fullName }}</p>
+                  <p><span class="uc">Email:</span> {{ user?.emailAddress }}</p>
+                  <p><span class="uc">Option:</span> {{ option }}</p>
+                  <p>
+                    <span class="uc">Wallet:</span>
+                    <!-- <code class="gen-code" id="myInput">{{ optionId }}</code> -->
+                    <input
+                      type="text"
+                      [value]="optionId"
+                      class="gen-code myInput"
+                      disabled
+                    />
+                  </p>
+                </div>
+                <div class="body-btns">
+                  <button
+                    (click)="myFunction()"
+                    (mouseenter)="overFunc()"
+                    class="btn sec-btn tooltip"
+                  >
+                    <span class="tooltiptext" id="myTooltip">{{
+                      tooltip
+                    }}</span>
+                    Copy
+                  </button>
+                  <button class="btn prim-btn" (click)="depositBtn()">
+                    Deposit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,60 @@
+/* Hero starts */
+/* .hero {
+  padding-top: 10rem;
+} */
+.gb-flex-img video {
+  width: 340px;
+  height: auto;
+}
+/* @media only screen and (max-width: 670px) {
+  .ba-flex-img {
+    display: none;
+  }
+} */
+
+/* Gemini Credit cards starts */
+.gb-credit-cards {
+  background-color: rgb(214, 211, 216);
+}
+sup {
+  font-size: 52%;
+  top: -0.6em;
+}
+ul li {
+  display: flex;
+  align-items: center;
+}
+ul li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+ul li img {
+  margin-right: 1rem;
+}
+/* Gemini Credit cards ends */
+
+/* Gemini earn starts */
+.gb-earn {
+  padding-top: 3rem;
+}
+.gb-earn .earn-icon {
+  margin-bottom: 0.5rem;
+}
+.gb-earn .gb-flex-img img {
+  width: 340px;
+}
+/* Gemini earn ends */
+
+/* Gemini nifty starts */
+.gb-nifty {
+  background-image: url("../../../assets/img/homepage-nifty-background.png");
+  background-position: center;
+  background-size: cover;
+  color: var(--white-color);
+}
+.gb-nifty .btn {
+  border-color: var(--white-color);
+  color: var(--white-color);
+}
+.gb-nifty .gb-flex-img img {
+  width: 211px;
+}

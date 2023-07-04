@@ -1,0 +1,63 @@
+<section class="">
+  <!-- Acount banner -->
+  <div class="account-banner">
+    <div class="account-banner-bg">
+      <div class="cover-image">
+        <h2>Hi, Welcome back!</h2>
+      </div>
+    </div>
+  </div>
+  <div class="withdraw-sect">
+    <h3 class="withdraw-sect-head">Withdraw fund from your account</h3>
+    <div class="withdraw-sect-body">
+      <h5 class="withdraw-sect-body-head">
+        Account Balance ${{ user?.currentBal }}
+      </h5>
+      <form
+        class="withdraw-sect-body-form"
+        (ngSubmit)="onEdit($event)"
+        [formGroup]="withdrawForm"
+      >
+        <div class="">
+          <label for="amount">Amount</label>
+          <input
+            type="number"
+            placeholder="Enter amount"
+            formControlName="amount"
+          />
+        </div>
+        <div class="">
+          <label for="email">Payment Method</label>
+          <select name="" id="">
+            <option value="">Select payment method</option>
+            <option value="Btc">Btc</option>
+            <option value="Etherum">Etherum</option>
+            <option value="Usdt">Usdt</option>
+          </select>
+        </div>
+        <div class="">
+          <label for="">Wallet Address</label>
+          <input type="text" placeholder="Enter Wallet Address" />
+        </div>
+        <div class="">
+          <label for="">Account Number</label>
+          <input type="text" placeholder="Enter Account Number" />
+        </div>
+        <div class="">
+          <label for="">Account Name</label>
+          <input type="text" placeholder="Enter Account Name" />
+        </div>
+        <div class="">
+          <label for="">Password</label>
+          <input type="password" placeholder="Enter password" />
+        </div>
+        <!-- Success Message -->
+        <span *ngIf="successMessage" class="gc">Withdrawal successful</span>
+        <!-- Button -->
+        <div class="col-2">
+          <button class="btn prim-btn" (click)="onEdit(user)">Withdraw</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

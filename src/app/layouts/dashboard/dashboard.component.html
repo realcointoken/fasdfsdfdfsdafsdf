@@ -1,0 +1,33 @@
+<div class="container-dash">
+  <!-- Side Nav -->
+  <aside class="sidenav-area" [class.show-menu]="hamClick">
+    <div class="sidenav" #sideNav>
+      <app-sidenav></app-sidenav>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main>
+    <div class="main-header">
+      <span class="main-header-menu" (click)="openMenu()" #menuBtn>
+        <i class="bx bx-menu-alt-left menu-icon clickable"></i>
+      </span>
+      <span class="main-header-profile">
+        <p>
+          Hello! <strong id="profile-name">{{ user?.firstName }}</strong>
+        </p>
+        <!-- {{ user?.userName }} -->
+        <!-- <img [src]="user?.imageUrl" alt="image" id="profile-image" /> -->
+        <img
+          src="../../../assets/img/svg/avatar.svg"
+          alt="image"
+          id="profile-image"
+        />
+      </span>
+    </div>
+    <div class="main-body">
+      <!-- <app-overview></app-overview> -->
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>

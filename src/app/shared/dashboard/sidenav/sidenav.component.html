@@ -1,0 +1,30 @@
+<!-- Side Nav -->
+<!-- Logo -->
+<span routerLink="/" class="sidenav-logo clickable">
+  <img src="../../../../assets/img/logo-white.png" alt="" />
+</span>
+<nav>
+  <ul class="sidenav-list">
+    <li
+      class="clickable"
+      routerLink="/dashboard"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Dashboard
+    </li>
+    <li class="clickable" routerLink="account" routerLinkActive="active">
+      Account
+    </li>
+    <li class="clickable" routerLinkActive="active" routerLink="send">
+      Deposit
+    </li>
+    <li class="clickable" routerLinkActive="active" routerLink="receive">
+      Withdrawal
+    </li>
+  </ul>
+</nav>
+<span class="logout dis-flex clickable" (click)="logOut()"
+  ><img src="../../../../assets/img/svg/Logout.svg" alt="" />
+  <p>Log out</p>
+</span>

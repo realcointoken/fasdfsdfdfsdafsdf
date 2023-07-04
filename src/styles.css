@@ -1,0 +1,220 @@
+/* Variables starts */
+:root {
+  --primary-color: rgb(1, 3, 4);
+  --secondary-color: rgb(1, 3, 4);
+  --blue-color: rgb(38, 221, 249);
+  --white-color: #ffffff;
+  --grey-color1: rgb(247, 247, 247);
+  --danger-color: #ff2e00;
+  --danger-hover-color: #d12600;
+  --box-shadow: -5px 8px 28px -13px rgba(150, 146, 146, 1);
+  -webkit-box-shadow: -5px 8px 28px -13px rgba(150, 146, 146, 1);
+  -moz-box-shadow: -5px 8px 28px -13px rgba(150, 146, 146, 1);
+  --border-radius: 5px;
+}
+/* Variables ends */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* background-color: #f0f3f4; */
+  color: var(--secondary-color);
+}
+
+/* General starts */
+a {
+  color: var(--primary-color);
+}
+button {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+input,
+button,
+textarea {
+  font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+input::placeholder,
+textarea::placeholder {
+  font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--secondary-color);
+}
+textarea {
+  resize: none;
+}
+
+/* Buttons Starts */
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 1rem;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  outline: none;
+  transition: all 0.4s;
+  border-radius: calc(var(--border-radius) + 20px);
+  background-color: transparent;
+}
+.prim-btn {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  border: 2px solid transparent;
+}
+.prim-btn:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+.sec-btn {
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+.sec-btn:hover {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  border: 2px solid transparent;
+}
+.tert-btn {
+  background-color: var(--blue-color);
+}
+.tert-btn:hover {
+  background-color: rgb(124, 234, 251);
+}
+/* Buttons ends */
+
+.clickable {
+  cursor: pointer;
+}
+.uc {
+  text-transform: uppercase;
+}
+.dis-flex {
+  display: flex;
+  align-items: center;
+}
+.gc {
+  color: #00d285;
+}
+.rc {
+  color: #eb5757;
+}
+/* Headings starts */
+h1 {
+  font-size: 50px;
+  line-height: 48px;
+  /* font-size: clamp(1.5rem, -0.4026rem + 6.2338vw, 3rem); */
+  /* font-size: 34px; */
+}
+h2 {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 600;
+}
+h3 {
+  font-size: 26px;
+  font-weight: 500;
+}
+h4 {
+  font-size: 22px;
+  font-weight: 500;
+}
+h5 {
+  font-size: 20px;
+  font-weight: 500;
+}
+p {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 300;
+}
+/* Headings ends */
+
+/* Section starts */
+.container {
+  padding: 0 5%;
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+}
+.sect {
+  padding: 3rem 0;
+}
+@media only screen and (max-width: 870px) {
+  .sect {
+    padding: 3rem 0;
+  }
+}
+/* Section ends */
+
+/* ba flex starts */
+.gb-flex-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gb-flex-content.row-reverse {
+  flex-direction: row-reverse;
+}
+.gb-flex-details {
+  flex-basis: 50%;
+}
+.gb-flex-details .gb-flex-details-title {
+  margin-bottom: 1rem;
+}
+/* .paragh {
+  margin: 1.5rem 0 2rem 0;
+} */
+.gb-flex-details .btn {
+  margin-top: 2rem;
+}
+.gb-flex-img {
+  flex-basis: 40%;
+  text-align: center;
+}
+.gb-flex-img img {
+  max-width: 100%;
+  height: auto;
+}
+@media only screen and (max-width: 670px) {
+  .gb-flex-content {
+    display: grid;
+    grid-gap: 2rem;
+  }
+}
+/* gb flex ends */
+
+/* gb dark background starts */
+.gb-dark-bg {
+  background-color: rgb(26, 28, 29);
+  text-align: center;
+  color: var(--white-color);
+}
+/* gb dark background ends */
+
+/* cryptosecurity-soc and Iso certified starts */
+.soc-iso img {
+  width: 140px;
+}
+@media only screen and (max-width: 670px) {
+  .soc-iso img {
+    width: 80px;
+  }
+}
+/* cryptosecurity-soc and Iso certified ends */

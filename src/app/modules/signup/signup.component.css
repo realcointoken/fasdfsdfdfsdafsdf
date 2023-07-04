@@ -1,0 +1,119 @@
+.auth-container {
+  background-color: var(--grey-color1);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+.auth-content {
+  display: none;
+  padding: 6%;
+}
+.auth-content .logo {
+  margin-bottom: 1.5rem;
+}
+.auth-content .logo img {
+  width: 127px;
+  height: 28px;
+}
+ul {
+  margin: 2rem 0;
+}
+ul li {
+  display: flex;
+  align-items: center;
+}
+ul li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+ul li img {
+  margin-right: 1rem;
+}
+.multi-phone {
+  display: flex;
+}
+.multi-phone img {
+  max-width: 100%;
+  margin: auto;
+  padding: 32px;
+}
+.auth-form-area {
+  width: 100%;
+  background-color: var(--white-color);
+  padding: 6%;
+}
+.auth-title {
+  margin-bottom: 0.5rem;
+}
+.form-container {
+  display: grid;
+  grid-gap: 1.5rem;
+  margin-top: 2rem;
+}
+.auth-form-area .logo {
+  display: grid;
+  place-items: center;
+  margin-bottom: 1rem;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+.auth-form-area .form-field.col-2 {
+  grid-column: 1 / span 2;
+}
+.auth-form-area .form-field .input-field {
+  width: 100%;
+  justify-content: space-between;
+  font-size: 16px;
+  color: rgb(52, 53, 54);
+  white-space: nowrap;
+  margin-top: 0.6rem;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(179, 179, 180);
+  border-radius: 12px;
+  transition: border-color 0s ease 0s, box-shadow 250ms ease-in-out 0s;
+}
+.auth-form-area .form-field .input-field:hover,
+.auth-form-area .form-field .input-field:active {
+  border-color: rgb(26, 28, 29);
+  box-shadow: rgb(26 28 29) 0px 0px 0px 1px;
+}
+.auth-form-area .form-field .input-field input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  padding: 1rem;
+}
+.auth-form-area .form-field .input-field input::placeholder {
+  color: rgb(179, 179, 180);
+}
+.auth-form-area .form-field .input-field img {
+  padding: 0 1rem;
+}
+
+.auth-form-area .form-footer {
+  justify-content: space-between;
+}
+.auth-form-area .form-footer p {
+  text-decoration: underline;
+  /* cursor: pointer; */
+}
+
+/* Media query starts */
+@media only screen and (min-width: 670px) {
+  .auth-content {
+    display: block;
+    flex-basis: 50%;
+  }
+  .auth-form-area {
+    flex-basis: 50%;
+  }
+  .auth-form-area .logo {
+    display: none;
+  }
+}
+/* Media query ends */

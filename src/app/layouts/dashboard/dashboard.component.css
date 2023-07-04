@@ -1,0 +1,93 @@
+@media only screen and (min-width: 755px) {
+  .container-dash {
+    display: flex;
+    width: 100%;
+  }
+}
+
+/* Side Nav starts */
+.sidenav-area {
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+}
+.sidenav {
+  height: 100%;
+  padding: 1.5rem;
+  background-color: var(--grey-color1);
+  background-image: url("../../../assets/img/homepage-nifty-background.png");
+  background-position: center;
+  background-size: cover;
+  color: var(--white-color);
+  position: relative;
+}
+/* Media Queries */
+@media only screen and (max-width: 755px) {
+  .sidenav-area {
+    position: fixed;
+    top: 0px;
+    left: -100%;
+    width: 100%;
+    background-color: #ebebeb79;
+    transition: 0.5s;
+    z-index: 100;
+  }
+  .sidenav-area.show-menu {
+    left: 0;
+  }
+  .sidenav {
+    width: 40%;
+  }
+}
+/* Side Nav ends */
+
+/* Main starts */
+main {
+  position: absolute;
+  left: 20%;
+  width: 80%;
+  padding: 1.5rem;
+}
+main .main-header {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .main-header .main-header-menu {
+  visibility: hidden;
+}
+main .main-header .menu-icon {
+  font-size: 30px;
+}
+main .main-header .main-header-profile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+main .main-header #profile-name {
+  margin-right: 1rem;
+}
+main .main-header #profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+main .main-body {
+  display: grid;
+  grid-gap: 2.5rem;
+}
+/* Main ends */
+
+/* Media Queries */
+@media only screen and (max-width: 755px) {
+  main {
+    position: relative;
+    left: 0;
+    width: 100%;
+  }
+  main .main-header .main-header-menu {
+    visibility: visible;
+  }
+}

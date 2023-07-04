@@ -1,0 +1,62 @@
+<div class="main-body">
+  <!-- Card List -->
+  <div class="card-list">
+    <div class="card">
+      <h4 class="uc">Btc/eur <i class="bx bxs-up-arrow-alt gc"></i></h4>
+      <p>1119,86 <span class="gc">+14,90(1,35%)</span></p>
+    </div>
+    <div class="card">
+      <h4 class="uc">Btc/usd <i class="bx bxs-up-arrow-alt gc"></i></h4>
+      <p>1119,93 <span class="gc">+3,90(0,25%)</span></p>
+    </div>
+    <div class="card">
+      <h4 class="uc">Eth/eur <i class="bx bxs-up-arrow-alt gc"></i></h4>
+      <p>49,22 <span class="gc">+1,23(2,14%)</span></p>
+    </div>
+    <div class="card">
+      <h4 class="uc">Eth/usd <i class="bx bxs-up-arrow-alt rc"></i></h4>
+      <p>45,26 <span class="rc">+2,73(5,51%)</span></p>
+    </div>
+  </div>
+
+  <div class="card-list bal-card">
+    <div class="card">
+      <h4 class="">Current Balance <i class="bx bxs-wallet-alt"></i></h4>
+      <p>${{ user?.currentBal }}</p>
+    </div>
+    <div class="card">
+      <h4 class="">Total Deposit <i class="bx bxs-server"></i></h4>
+      <p>${{ user?.totalDepo }}</p>
+    </div>
+    <div class="card">
+      <h4 class="">Total Withdrawal <i class="bx bx-money"></i></h4>
+      <p>${{ user?.totalWith }}</p>
+    </div>
+  </div>
+
+  <!-- Btc table -->
+  <section class="btc-chart">
+    <iframe
+      class="tradingview"
+      scrolling="no"
+      allowtransparency="true"
+      frameborder="0"
+      src="https://s.tradingview.com/embed-widget/forex-cross-rates/?locale=en#%7B%22width%22%3A980%2C%22height%22%3A400%2C%22currencies%22%3A%5B%22EUR%22%2C%22USD%22%2C%22JPY%22%2C%22BTC%22%2C%22ETH%22%2C%22LTC%22%2C%22GBP%22%2C%22CHF%22%2C%22AUD%22%2C%22CAD%22%2C%22NZD%22%2C%22CNY%22%5D%2C%22isTransparent%22%3Afalse%2C%22colorTheme%22%3A%22light%22%2C%22utm_source%22%3A%22dynamicpremiumassets.com%22%2C%22utm_medium%22%3A%22widget_new%22%2C%22utm_campaign%22%3A%22forex-cross-rates%22%7D"
+    ></iframe>
+  </section>
+
+  <!-- Btc Chart -->
+  <section class="btc-chart">
+    <div>
+      <iframe
+        id="tradingview"
+        class="tradingview"
+        src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_dd6f1&amp;symbol=COINBASE%3ABTCUSD&amp;interval=D&amp;symboledit=1&amp;saveimage=1&amp;toolbarbg=f1f3f6&amp;studies=%5B%5D&amp;theme=Dark&amp;style=1&amp;timezone=Etc%2FUTC&amp;studies_overrides=%7B%7D&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=en&amp;utm_source=www.bitlunaroptions.com&amp;utm_medium=widget_new&amp;utm_campaign=chart&amp;utm_term=COINBASE%3ABTCUSD"
+        allowtransparency="true"
+        scrolling="no"
+        allowfullscreen=""
+        frameborder="0"
+      ></iframe>
+    </div>
+  </section>
+</div>

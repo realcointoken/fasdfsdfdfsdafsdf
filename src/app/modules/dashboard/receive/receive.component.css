@@ -1,0 +1,89 @@
+/*/---- Main start ----/*/
+input:hover,
+select:hover {
+  border-color: rgb(26, 28, 29);
+  box-shadow: rgb(26 28 29) 0px 0px 0px 1px;
+}
+
+.account-banner {
+  padding-bottom: 1rem;
+  /* box-shadow: var(--box-shadow); */
+}
+.account-banner-bg .cover-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../../../assets/img/bg-2.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 250px;
+  width: 100%;
+}
+.account-banner-bg .cover-image h2 {
+  font-size: 28px;
+  color: var(--white-color);
+  padding: 5rem 0 0 3rem;
+}
+
+.account-banner-info {
+  display: block;
+  width: 90%;
+  margin: 2rem auto;
+}
+@media only screen and (min-width: 585px) {
+  .account-banner-info {
+    display: flex;
+    align-items: center;
+  }
+}
+.account-banner .btn {
+  padding: 0.5rem;
+}
+
+/* Withdraw Section */
+.withdraw-sect {
+  display: grid;
+  grid-gap: 2rem;
+  border: 1px solid var(--light-grey);
+  padding: 1rem;
+}
+.withdraw-sect-head,
+.withdraw-sect-body-head {
+  text-align: center;
+}
+.withdraw-sect-body-form {
+  display: grid;
+  grid-gap: 1.5rem;
+  margin-top: 1rem;
+}
+.withdraw-sect-body-form input,
+.withdraw-sect-body-form select {
+  width: 100%;
+  /* justify-content: space-between; */
+  font-size: 16px;
+  color: rgb(52, 53, 54);
+  white-space: nowrap;
+  padding: 1rem;
+  margin-top: 0.6rem;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(179, 179, 180);
+  transition: border-color 0s ease 0s, box-shadow 250ms ease-in-out 0s;
+  border-radius: 12px;
+}
+.withdraw-sect-body-form .btn {
+  padding: 0.5rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/* .withdraw-sect-body-form {
+  display: grid;
+  grid-gap: 2rem;
+}
+ */
+@media only screen and (min-width: 585px) {
+  .withdraw-sect-body-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .col-2 {
+    grid-column: 1 / span 2;
+  }
+}

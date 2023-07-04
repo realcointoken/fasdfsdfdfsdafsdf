@@ -1,0 +1,125 @@
+header {
+  box-shadow: var(--box-shadow);
+  position: fixed;
+  width: 100%;
+  z-index: 150;
+  background-color: var(--white-color);
+}
+li {
+  cursor: pointer;
+}
+.header .container,
+.header .nav-list {
+  display: flex;
+  align-items: center;
+}
+
+/* Header starts */
+.header .container,
+.logo,
+.nav-list {
+  height: 7rem;
+}
+.header .container {
+  justify-content: space-between;
+}
+.logo img {
+  /* width: 150px;
+  height: auto; */
+  width: 87px;
+  height: 87px;
+}
+.nav-list .nav-item {
+  line-height: 5rem;
+  font-weight: 500;
+  transition: all 0.4s ease-in;
+}
+.nav-list .nav-item:not(:last-child) {
+  margin-right: 1.5rem;
+}
+.nav-item:hover {
+  color: var(---primary-color);
+}
+.get-started .btn {
+  padding: 0.5rem 1.5rem;
+}
+
+/* HamBurger starts */
+.toggle-menu {
+  cursor: pointer;
+  margin-top: -6px;
+  display: none;
+}
+.toggle-menu .menu-bar {
+  width: 2rem;
+  height: 2px;
+  background-color: var(--primary-color);
+  display: inline-block;
+  position: relative;
+  transform: translateX(-1rem);
+  transition: background-color 0.5s;
+}
+.toggle-menu .menu-bar::before,
+.toggle-menu .menu-bar::after {
+  content: "";
+  position: absolute;
+  height: inherit;
+  background-color: inherit;
+  transition: all 0.5s;
+}
+.toggle-menu .menu-bar::before {
+  width: 2rem;
+  top: -0.6rem;
+}
+.toggle-menu .menu-bar::after {
+  width: 2rem;
+  top: 0.6rem;
+}
+.open-menu .menu-bar {
+  background-color: transparent !important;
+}
+.open-menu .menu-bar::before {
+  top: 0 !important;
+  transform: rotate(135deg);
+  background-color: var(--primary-color) !important;
+}
+.open-menu .menu-bar::after {
+  top: 0 !important;
+  transform: rotate(-135deg);
+  background-color: var(--primary-color) !important;
+}
+/* HamBurger ends */
+
+/* Media query starts */
+@media screen and (max-width: 870px) {
+  .logo img {
+    width: 87px;
+    height: 87px;
+  }
+  .nav-list {
+    position: fixed;
+    top: 0px;
+    left: -100%;
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    box-shadow: 0 20px 25px rgba(255, 255, 255, 0.26);
+    transition: 0.5s;
+    z-index: 100;
+    display: grid !important;
+  }
+  .nav-list.open-menu {
+    left: 0;
+  }
+  .toggle-menu {
+    display: block;
+    margin-left: 2.5rem;
+  }
+  .get-started .btn {
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+  }
+}
+/* Media query ends */

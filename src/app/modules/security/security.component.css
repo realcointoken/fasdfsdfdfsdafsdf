@@ -1,0 +1,145 @@
+.sect-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.sect-heading p {
+  margin-top: 1rem;
+}
+.details-p {
+  margin-top: 1rem;
+}
+/* Security Trust starts */
+.security-trust h1 {
+  margin: 2rem 0;
+}
+.security-trust p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.security-trust {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  text-align: center;
+}
+.security-trust .soc-iso {
+  margin-top: 2rem;
+}
+.security-trust .soc-iso img:not(:last-child) {
+  margin-right: 3rem;
+}
+
+/* Security Trust ends */
+
+/* Security contact starts */
+/* gb card starts */
+.security-contact .gb-card {
+  display: grid;
+  grid-gap: 2rem;
+  align-items: center;
+}
+@media only screen and (min-width: 450px) {
+  .security-contact .gb-card {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+.security-contact .gb-item,
+.security-valid-coms {
+  background: var(--grey-color1);
+  width: 100%;
+  border-radius: 8px;
+  padding: 34px;
+}
+.security-contact .gb-item img {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 1.5rem;
+}
+.security-contact .gb-item .learn-more {
+  text-decoration: underline;
+  display: block;
+  margin-top: 0.3rem;
+}
+/* ba card ends */
+
+/* Valid coms starts*/
+.security-valid-coms {
+  margin-top: 3rem;
+}
+.link-list {
+  display: grid;
+  grid-gap: 1rem;
+}
+.link-item {
+  padding: 0.5rem;
+  border-radius: 999px;
+}
+.link-item.correct {
+  background-color: rgb(207, 237, 217);
+}
+.link-item.wrong {
+  background-color: rgb(254, 218, 218);
+}
+.link-item img {
+  width: 31px;
+  margin-right: 1rem;
+}
+.link-item p {
+  font-weight: 500;
+}
+.link-item p span {
+  text-decoration: underline;
+}
+/* Valid coms ends*/
+
+/* Security contact ends */
+
+/* Security controls starts */
+.security-controls {
+}
+.security-controls .tab-buttons {
+  padding: 1rem 5%;
+  border-top: 1px solid rgb(230, 230, 230);
+  border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+@media only screen and (min-width: 670px) {
+  .security-controls .tab-buttons .dis-flex {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 977px) {
+  .security-controls .tab-buttons {
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
+.security-controls .tab-buttons button {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 1rem;
+}
+.security-controls .tab-buttons button.active {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+.tab-content {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  align-items: flex-start;
+}
+.tab-content-heading {
+  flex-basis: 30%;
+}
+.tab-content-list {
+  flex-basis: 55%;
+}
+.tab-content p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.tab-content .tab-content-list li {
+  list-style: disc;
+}
+.tab-content .tab-content-list li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+/* Security controls ends */

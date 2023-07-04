@@ -1,0 +1,262 @@
+<div class="auth-container">
+  <div class="auth-content">
+    <div class="logo">
+      <img
+        src="../../../assets/img/logo.webp"
+        alt=""
+        class="clickable logo"
+        routerLink="/"
+      />
+    </div>
+    <div class="">
+      <h3 class="">Start building your crypto portfolio</h3>
+      <ul>
+        <li>
+          <img src="../../../assets/img/svg/check-icon-black.svg" alt="" />
+          <p>45+ cryptos including bitcoin, ether, and dogecoin</p>
+        </li>
+        <li>
+          <img src="../../../assets/img/svg/check-icon-black.svg" alt="" />
+          <p>Industry-leading security and compliance.</p>
+        </li>
+        <li>
+          <img src="../../../assets/img/svg/check-icon-black.svg" alt="" />
+          <p>Available in all 50 states and 50+ countries</p>
+        </li>
+        <li>
+          <img src="../../../assets/img/svg/check-icon-black.svg" alt="" />
+          <p>Get started with as little as $5</p>
+        </li>
+      </ul>
+      <div class="multi-phone">
+        <img src="../../../assets/img/multi_phone.png" alt="" />
+      </div>
+    </div>
+  </div>
+  <form class="auth-form-area" (ngSubmit)="signup()" [formGroup]="signupForm">
+    <div *ngIf="id == 'form1'">
+      <span class="logo">
+        <img
+          src="../../../assets/img/favicon.ico"
+          alt=""
+          class="clickable"
+          routerLink="/"
+        />
+      </span>
+      <h2 class="auth-title">Create an account</h2>
+      <small>Please enter your name as it appears on official documents.</small>
+      <div class="form-container">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="first-name">First name</label>
+            <div class="input-field">
+              <input
+                type="text"
+                placeholder="First name"
+                autocomplete="first-name"
+                formControlName="firstName"
+              />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="middle-name">Middle name</label>
+            <div class="input-field">
+              <input
+                type="text"
+                placeholder="Middle name"
+                autocomplete="middle-name"
+                formControlName="middleName"
+              />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="last-name">Last name</label>
+            <div class="input-field">
+              <input
+                type="text"
+                placeholder="Last name"
+                autocomplete="last-name"
+                formControlName="lastName"
+              />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="phone-number">Phone number</label>
+            <div class="input-field">
+              <input
+                type="tel"
+                placeholder="Phone Number"
+                autocomplete="phone-number"
+                formControlName="phoneNumber"
+              />
+            </div>
+          </div>
+          <div class="form-field col-2">
+            <label for="email">Email Address</label>
+            <div class="input-field">
+              <input
+                type="email"
+                placeholder="E.g Metrocrypto@gmail.com"
+                autocomplete="email"
+                formControlName="email"
+              />
+            </div>
+          </div>
+          <div class="form-field col-2">
+            <label for="password">Password</label>
+            <div class="input-field dis-flex">
+              <input
+                placeholder="Password"
+                formControlName="password"
+                [type]="hide ? 'password' : 'text'"
+              />
+              <img
+                [src]="
+                  hide
+                    ? '../../../assets/img/svg/bx-show.svg'
+                    : '../../../assets/img/svg/bx-hide.svg'
+                "
+                class="clickable"
+                (click)="hide = !hide"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form-footer dis-flex">
+          <button class="btn prim-btn" (click)="showForm('form2')">
+            <span>Next</span>
+          </button>
+          <div class="form-footer-extra">
+            <p class="clickable" routerLink="/auth/signin">Account sign in</p>
+            <!-- <p class="clickable">Rest your password</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="id == 'form2'">
+      <span class="logo">
+        <img
+          src="../../../assets/img/favicon.ico"
+          alt=""
+          class="clickable"
+          routerLink="/"
+        />
+      </span>
+      <h2 class="auth-title">Enter your address</h2>
+      <small
+        >Please enter your primary address. This is required to verify your
+        identity.</small
+      >
+      <div class="form-container">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="address">Address</label>
+            <div class="input-field">
+              <input
+                type="text"
+                placeholder="e.g 21B  Coker Street"
+                autocomplete="address"
+                formControlName="address"
+              />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="middle-name">City/Town/Subdivision</label>
+            <div class="input-field">
+              <input
+                type="text"
+                placeholder="City/Town/Subdivision"
+                autocomplete="city"
+                formControlName="city"
+              />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="state">State</label>
+            <div class="input-field">
+              <input
+                type="text"
+                placeholder="State"
+                autocomplete="state"
+                formControlName="state"
+              />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="zip-code">ZIP code</label>
+            <div class="input-field">
+              <input
+                type="text"
+                placeholder="ZIP code"
+                autocomplete="zip-code"
+                formControlName="zipCode"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form-footer dis-flex">
+          <span class="btn prim-btn clickable" (click)="showForm('form3')">
+            Next
+          </span>
+          <div class="form-footer-extra">
+            <p class="clickable">Account sign in</p>
+            <!-- <p class="clickable">Rest your password</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="id == 'form3'">
+      <span class="logo">
+        <img
+          src="../../../assets/img/favicon.ico"
+          alt=""
+          class="clickable"
+          routerLink="/"
+        />
+      </span>
+      <h2 class="auth-title">Confirm your identity</h2>
+      <small
+        >Financial regulations require us to collect this information.</small
+      >
+      <div class="form-container">
+        <div class="form-row">
+          <div class="form-field col-2">
+            <label for="ssn">Social Security Number (SSN)</label>
+            <div class="input-field dis-flex">
+              <input
+                placeholder="SSN"
+                formControlName="ssn"
+                [type]="hide ? 'password' : 'text'"
+              />
+              <img
+                [src]="
+                  hide
+                    ? '../../../assets/img/svg/bx-show.svg'
+                    : '../../assets/img/svg/bx-hide.svg'
+                "
+                class="clickable"
+                (click)="hide = !hide"
+              />
+            </div>
+          </div>
+          <div class="form-field col-2">
+            <label for="dob">Date of birth</label>
+            <div class="input-field">
+              <input type="date" autocomplete="d0b" formControlName="dob" />
+            </div>
+          </div>
+        </div>
+        <div class="form-footer dis-flex">
+          <button class="btn prim-btn">
+            <span *ngIf="loading">Loading...</span>
+            <span *ngIf="!loading">Submit</span>
+          </button>
+          <div class="form-footer-extra">
+            <p class="clickable">Account sign in</p>
+            <!-- <p class="clickable">Rest your password</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

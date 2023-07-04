@@ -1,0 +1,137 @@
+/*/---- Main start ----/*/
+input:hover {
+  border-color: rgb(26, 28, 29);
+  box-shadow: rgb(26 28 29) 0px 0px 0px 1px;
+}
+
+.account-banner {
+  padding-bottom: 1rem;
+  box-shadow: var(--box-shadow);
+}
+.account-banner-bg .cover-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../../../assets/img/bg-2.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 250px;
+  width: 100%;
+}
+.account-banner-bg .cover-image h2 {
+  font-size: 28px;
+  color: var(--white-color);
+  padding: 5rem 0 0 3rem;
+}
+.account-banner-info {
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+}
+@media only screen and (min-width: 585px) {
+  .account-banner-info {
+    display: flex;
+    align-items: center;
+  }
+}
+.account-banner-info-image {
+  max-width: 100px;
+  width: 196px;
+  height: auto;
+  margin-top: -40px;
+  margin-right: 20px;
+}
+.account-banner-info-image .profile-image {
+  width: 100%;
+  border-radius: 50%;
+}
+@media only screen and (min-width: 585px) {
+  .account-banner-info-details {
+    display: flex;
+    align-items: center;
+  }
+}
+.account-banner-info-details h4 {
+  font-size: 1.34rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+.account-banner-info-details p {
+  font-size: 1rem;
+}
+.account-banner-info-details .profile-name {
+  margin-right: 2rem;
+}
+@media only screen and (max-width: 585px) {
+  .account-banner-info-details .profile-name {
+    margin-bottom: 1rem;
+  }
+}
+.account-banner-info-details .profile-name h4 {
+  color: var(--primary-color);
+}
+.account-banner-info-details .profile-email h4 {
+  color: var(--text-color2);
+}
+
+/* Account profile */
+.account-profile {
+  padding-top: 1rem;
+}
+.account-profile-heading {
+  border-bottom: 1px solid var(--light-grey);
+  padding: 1.5rem;
+}
+.account-profile-details {
+  padding: 0 1.5rem;
+}
+.account-profile-details h5 {
+  font-size: 16px !important;
+}
+.account-profile-details .account-info {
+  padding: 1.5rem 0;
+}
+.account-profile-details .account-info form {
+  display: grid;
+  grid-gap: 2rem;
+  align-items: flex-start;
+}
+.account-profile-details .account-info form .user-info,
+.account-profile-details .account-info form .contact-info {
+  display: grid;
+  grid-gap: 2rem;
+}
+.account-profile-details .account-info input {
+  width: 100%;
+  /* justify-content: space-between; */
+  font-size: 16px;
+  color: rgb(52, 53, 54);
+  white-space: nowrap;
+  padding: 1rem;
+  margin-top: 0.6rem;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(179, 179, 180);
+  transition: border-color 0s ease 0s, box-shadow 250ms ease-in-out 0s;
+  border-radius: 12px;
+}
+.account-profile-details .account-info input::placeholder {
+  color: var(--text-color);
+}
+@media only screen and (min-width: 585px) {
+  .account-profile-details .account-info form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .account-profile-details .update-btn {
+    grid-column: 1 / span 2;
+  }
+}
+.account-profile-details .update-btn,
+.account-profile-details .update-btn .success-msg {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.account-profile-details .update-btn .btn {
+  padding: 0.5rem;
+}
+.account-profile-details .update-btn .success-msg {
+  font-size: 14px;
+}
+/*/---- Main ends ----/*/

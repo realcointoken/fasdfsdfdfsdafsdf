@@ -1,0 +1,87 @@
+.main-body {
+  display: grid;
+  grid-gap: 2.5rem;
+}
+.main-body .card-list {
+  display: grid;
+  grid-gap: 2rem;
+}
+.main-body .card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+}
+/* Main ends */
+
+/* Media Queries */
+@media only screen and (max-width: 755px) {
+  .sidenav-area {
+    position: fixed;
+    top: 0px;
+    left: -100%;
+    width: 100%;
+    background-color: #ebebeb79;
+    transition: 0.5s;
+    z-index: 100;
+  }
+  .sidenav-area.show-menu {
+    left: 0;
+  }
+  .sidenav {
+    width: 40%;
+  }
+  main {
+    position: relative;
+    left: 0;
+    width: 100%;
+  }
+  main .main-header .main-header-menu {
+    visibility: visible;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .main-body .card-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+.card-list .card h4 i {
+  font-size: 26px;
+  vertical-align: middle;
+}
+.card-list .card p {
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+.card-list .card p span {
+  margin-left: 1rem;
+}
+/* Balance Card */
+.bal-card .card i {
+  color: var(--blue-color);
+}
+.bal-card .card h4 {
+  font-weight: 500;
+}
+.bal-card .card h4 i {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  float: right;
+  font-size: 40px;
+}
+.bal-card .card p {
+  margin-top: 2rem;
+}
+
+/* Table */
+
+/* Btc chart starts */
+/* .btc-chart {
+
+} */
+.btc-chart .tradingview {
+  width: 100%;
+  height: 55vh;
+}
+/* Btc chart ends */

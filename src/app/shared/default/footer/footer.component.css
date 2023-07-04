@@ -1,0 +1,36 @@
+ul li:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
+ul li {
+  cursor: pointer;
+  transition: 0.2s all ease-in;
+}
+a {
+  transition: 0.2s all ease-in;
+}
+ul li:hover,
+a:hover {
+  color: var(--yellow-color);
+}
+p,
+li {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+footer {
+  background-color: var(--grey-color1);
+  padding: 3rem 0 3rem 0;
+}
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 2rem;
+}
+.links .links-header {
+  margin-bottom: 1rem;
+}
+
+footer .copyright {
+  margin-top: 7rem;
+}

@@ -1,0 +1,123 @@
+<section class="sect">
+  <div class="container">
+    <div class="header">
+      <h1>Submit a Request</h1>
+    </div>
+    <div class="contact-body">
+      <div class="form-area">
+        <form (ngSubmit)="submit()" [formGroup]="contactForm">
+          <div class="form-field">
+            <label for="email">Email Address <strong>*</strong></label>
+            <div class="input-field">
+              <input
+                type="email"
+                autocomplete="email"
+                formControlName="email"
+              />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="email">I need help with <strong>*</strong></label>
+            <select name="" id="" formControlName="option">
+              <option value="">-</option>
+              <option value="linking my bank account">
+                Linking my bank account
+              </option>
+              <option value="depositing currency">
+                Depositing (Cash) Currency
+              </option>
+              <option value="depositing crypto">Depositing Crypto</option>
+              <option value="withdrawing currency">
+                Withdrawing (Cash) Currency
+              </option>
+              <option value="withdrawing crypto">Withdrawing Crypto</option>
+              <option value="debit Card">Debit Card</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="email">Subject <strong>*</strong></label>
+            <div class="input-field">
+              <input
+                type="text"
+                autocomplete="subject"
+                formControlName="subject"
+              />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="email"
+              >Details of your request <strong>*</strong></label
+            >
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              formControlName="details"
+            ></textarea>
+          </div>
+          <small
+            >A member of our support staff will respond as soon as
+            possible.</small
+          >
+          <!-- Message -->
+          <span class="status gc" *ngIf="success">Message Sent!</span>
+          <span class="status rc" *ngIf="failed">Oops! Failed</span>
+
+          <div class="form-footer dis-flex">
+            <button class="btn prim-btn">
+              <span *ngIf="loading">Loading...</span>
+              <span *ngIf="!loading">Submit</span>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="options">
+        <ul>
+          <li class="dis-flex">
+            <img
+              src="../../../assets/img/svg/bx-radio-circle-marked.svg"
+              alt=""
+            />
+            Depositing & Withdrawing
+          </li>
+          <li class="dis-flex">
+            <img
+              src="../../../assets/img/svg/bx-radio-circle-marked.svg"
+              alt=""
+            />
+            Signing In & Account Restrictions
+          </li>
+          <li class="dis-flex">
+            <img
+              src="../../../assets/img/svg/bx-radio-circle-marked.svg"
+              alt=""
+            />
+            Trading & Metrocrypto Earn
+          </li>
+          <li class="dis-flex">
+            <img
+              src="../../../assets/img/svg/bx-radio-circle-marked.svg"
+              alt=""
+            />
+            Account Management & Verification
+          </li>
+          <li class="dis-flex">
+            <img
+              src="../../../assets/img/svg/bx-radio-circle-marked.svg"
+              alt=""
+            />
+            Fraudulent Activity
+          </li>
+          <li class="dis-flex">
+            <img
+              src="../../../assets/img/svg/bx-radio-circle-marked.svg"
+              alt=""
+            />
+            Metrocrypto Credit Card
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,298 @@
+<section class="sect security-trust">
+  <div class="container">
+    <p class="uc">Security</p>
+    <h1>Trust is our product.</h1>
+    <p>
+      Our founders, Cameron and Tyler Winklevoss, were early investors in
+      cryptocurrency and struggled to find a platform where they could securely
+      manage their growing portfolio. Out of that frustration and lack of trust,
+      they built Metrocrypto to deliver the first trusted platform that focused on
+      strong security controls and compliance.
+    </p>
+    <p>
+      Today, every employee at Metrocrypto continues our founders’ focus on security
+      and compliance, in order to build trust. Metrocrypto has built a leading
+      security program focused on developing innovative security solutions to
+      help protect and secure our customers and their assets. We have also
+      invested considerable resources to remain transparent about our security
+      posture, through third party security assessments, including our SOC2 Type
+      2, ISO 27001, and annual penetration testing.
+    </p>
+    <div class="soc-iso">
+      <img src="../../../assets/img/cryptosecurity-soc-logo.png" alt="" />
+      <img src="../../../assets/img/iso-certified-white.webp" alt="" />
+    </div>
+  </div>
+</section>
+
+<!-- Security contact -->
+<section class="sect security-contact">
+  <div class="container">
+    <div class="sect-heading">
+      <h2>Contacting the Security Team</h2>
+    </div>
+    <div class="gb-card">
+      <div class="gb-item">
+        <div class="gb-item-details">
+          <picture class="">
+            <img src="../../../assets/img/security.svg" alt="image" />
+          </picture>
+          <div class="">
+            <h3 class="">Reporting Fraud or Abuse</h3>
+            <p class="details-p">
+              We’ve built a rules-based marketplace with security at its core,
+              so that our customers can focus on building their crypto
+              portfolio. Our team is ready to help should you encounter fraud or
+              abuse. We recommend you take a moment to visit our Trust and
+              Safety page, which contains materials to help users avoid fraud
+              and spot scams.
+            </p>
+            <span class="learn-more clickable">Report Fraud or Scams</span>
+          </div>
+        </div>
+      </div>
+      <div class="gb-item">
+        <div class="gb-item-details">
+          <picture class="">
+            <img src="../../../assets/img/coordinated.svg" alt="image" />
+          </picture>
+          <div class="">
+            <h3 class="">Coordinated Disclosure Program</h3>
+            <p class="details-p">
+              We welcome contributions from security researchers to help us
+              build and secure the future of money. To submit a security
+              vulnerability to Metrocrypto, or to learn more about our coordinated
+              disclosure program, please visit our HackerOne page. Impactful
+              vulnerability submissions will be considered for inclusion in
+              Metrocrypto’s private bug bounty program.
+            </p>
+            <span class="learn-more clickable"
+              >Disclose a Security Vulnerability</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="security-valid-coms gb-card">
+      <div class="">
+        <h3 class="">Valid Metrocrypto Communications</h3>
+        <p class="details-p">
+          Metrocrypto does not offer phone support. All support is provided via
+          email. You will only be contacted via a valid Metrocrypto email. Emails
+          from Metrocrypto will always end with the .metrocryptoexchange.com domain name. For
+          example, emails from support@metrocryptoexchange.com or from the sub-domain
+          hello@news.metrocryptoexchange.com are valid Metrocrypto email addresses, because they
+          end with .metrocryptoexchange.com.
+        </p>
+      </div>
+      <ul class="link-list">
+        <li class="link-item correct dis-flex">
+          <img src="../../../assets/img/correct.webp" alt="" />
+          <p>xxxxxx@<span>metrocryptoexchange.com</span></p>
+        </li>
+        <li class="link-item correct dis-flex">
+          <img src="../../../assets/img/correct.webp" alt="" />
+          <p>xxxxxx@news.<span>metrocryptoexchange.com</span></p>
+        </li>
+        <li class="link-item wrong dis-flex">
+          <img src="../../../assets/img/wrong.webp" alt="" />
+          <p>xxxxxx@metrocryptoexchange<span>gem.com</span></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Security controls -->
+<section class="sect security-controls">
+  <div class="">
+    <div class="sect-heading container">
+      <h2>Industry Leading Security Controls</h2>
+      <p>
+        Trust is our product, which begins by building and maintaining a secure
+        customer experience. The following provides information about the
+        leading security controls we’ve implemented to secure customer accounts
+        and assets, and mitigate the risk of insider threats.
+      </p>
+    </div>
+    <div class="security-controls-body">
+      <div class="tab-buttons">
+        <div class="dis-flex">
+          <button class="btn" [class.active]="account" (click)="showAccount()">
+            Account
+          </button>
+          <button
+            class="btn"
+            [class.active]="controls"
+            (click)="showControls()"
+          >
+            Controls
+          </button>
+          <button class="btn" [class.active]="assets" (click)="showAssets()">
+            Assets
+          </button>
+          <button
+            class="btn"
+            [class.active]="compliance"
+            (click)="showCompliance()"
+          >
+            Compliance
+          </button>
+        </div>
+      </div>
+      <div class="tab-content container gb-flex-content" *ngIf="account">
+        <div class="tab-content-heading">
+          <h3>Account security</h3>
+          <p class="details-p">
+            We build innovative security solutions to better protect our users
+            and their accounts.
+          </p>
+        </div>
+        <ul class="tab-content-list">
+          <li>
+            <p>
+              Two-Factor Authentication (2FA) is required by default, in order
+              to access your account and make withdrawals.
+            </p>
+          </li>
+          <li>
+            <p>
+              Support for hardware security keys, like Yubikey, allows for a
+              more secure 2FA experience for account access.
+            </p>
+          </li>
+          <li>
+            <p>
+              Address whitelisting allows users to restrict cryptocurrency
+              withdrawals to whitelisted cryptocurrency addresses.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-content container gb-flex-content" *ngIf="controls">
+        <div class="tab-content-heading">
+          <h3>Internal Controls</h3>
+          <p class="details-p">
+            Metrocrypto has implemented leading security controls designed to
+            mitigate the risk of insider threats.
+          </p>
+        </div>
+        <ul class="tab-content-list">
+          <li>
+            <p>
+              Multiple signatories are required to transfer cryptocurrency out
+              of our Cold Storage System and perform other sensitive functions.
+            </p>
+          </li>
+          <li>
+            <p>
+              Metrocrypto offices do not contain any private keys. All private keys
+              are stored offsite at high-security data centers.
+            </p>
+          </li>
+          <li>
+            <p>
+              All employees undergo rigorous background checks and are subject
+              to ongoing screening throughout their employment.
+            </p>
+          </li>
+          <li>
+            <p>
+              Access to production systems requires use of hardware security
+              keys, which are not susceptible to phishing attacks.
+            </p>
+          </li>
+          <li>
+            <p>
+              Our CEO (Tyler Winklevoss) and President (Cameron Winklevoss) are
+              unable to individually or jointly transfer cryptocurrency out of
+              our Online “Hot” or Offline “Cold” Storage.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-content container gb-flex-content" *ngIf="assets">
+        <div class="tab-content-heading">
+          <h3>Asset Security</h3>
+          <p class="details-p">
+            Metrocrypto is passionate about building the most secure infrastructure
+            to protect and manage sensitive key material.
+          </p>
+        </div>
+        <ul class="tab-content-list">
+          <li>
+            <p>
+              The hardware security modules (HSMs) we rely upon have achieved a
+              FIPS 140-2 Level 3 rating or higher.
+            </p>
+          </li>
+          <li>
+            <p>
+              The multisignature digital signature scheme (multisig) used
+              eliminates single points of failure and improves our resilience
+              against the loss or compromise of any individual private key.
+            </p>
+          </li>
+          <li>
+            <p>
+              All HSMs are geographically distributed at secure data centers and
+              require coordinated action of multiple employees to operate.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-content container gb-flex-content" *ngIf="compliance">
+        <div class="tab-content-heading">
+          <h3>Compliance and Certifications</h3>
+          <p class="details-p">
+            Trust requires transparency, which is why Metrocrypto has embraced
+            regulations and third party assessments that demonstrate our
+            commitment to a safe and secure experience.
+          </p>
+        </div>
+        <ul class="tab-content-list">
+          <li>
+            <p>
+              Metrocrypto was the first cryptocurrency exchange and custodian to
+              complete a SOC 1 Type 2 exam, SOC 2 Type 2 exam, and earn an ISO
+              27001 certification.
+            </p>
+          </li>
+          <li>
+            <p>
+              We maintain compliance with PCI DSS to protect debit / credit card
+              data.
+            </p>
+          </li>
+          <li>
+            <p>
+              Metrocrypto is subject to security requirements of our global
+              regulators. This includes, but is not limited to, the NY
+              Department of Financial Services (NYDFS), Monetary Authority of
+              Singapore (MAS), and UK Financial Conduct Authority (FCA).
+            </p>
+          </li>
+          <li>
+            <p>
+              Metrocrypto hires independent third parties to perform penetration
+              tests - at least annually - in order to proactively identify and
+              resolve security vulnerabilities.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust Crypto Native -->
+<section class="sect gb-simple gb-dark-bg">
+  <div class="container gb-flex-details">
+    <h2 class="gb-flex-details-title">
+      The most trusted crypto-native finance platform
+    </h2>
+    <p>Create a free Metrocrypto account in minutes</p>
+    <button class="btn tert-btn">Get started</button>
+  </div>
+</section>

@@ -1,0 +1,249 @@
+/*/---- Main start ----/*/
+input:hover,
+select:hover {
+  border-color: rgb(26, 28, 29);
+  box-shadow: rgb(26 28 29) 0px 0px 0px 1px;
+}
+
+.account-banner {
+  padding-bottom: 1rem;
+  /* box-shadow: var(--box-shadow); */
+}
+.account-banner-bg .cover-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../../../assets/img/bg-2.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 250px;
+  width: 100%;
+}
+.account-banner-bg .cover-image h2 {
+  font-size: 28px;
+  color: var(--white-color);
+  padding: 5rem 0 0 3rem;
+}
+.account-banner-info {
+  display: block;
+  width: 90%;
+  margin: 2rem auto;
+}
+@media only screen and (min-width: 585px) {
+  .account-banner-info {
+    display: flex;
+    align-items: center;
+  }
+}
+.account-banner .btn {
+  padding: 0.5rem;
+}
+
+/* Plan card */
+.plan-card {
+  display: grid;
+  grid-gap: 2rem;
+  margin-top: 2rem;
+}
+@media only screen and (min-width: 1200px) {
+  .plan-card {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+}
+@media only screen and (min-width: 480px) {
+  .plan-card {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+.plan-card-item h4,
+.plan-card-item ul {
+  text-align: center;
+}
+.plan-card-item {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+.plan-card-item ul {
+  margin: 1rem 0;
+}
+.plan-card-item ul li {
+  padding: 0.5rem;
+}
+.plan-card-item .btn {
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.plan-card-side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: 100%; */
+  /* border: 1px solid var(--light-grey); */
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 25px rgb(14 36 49 / 15%);
+  padding: 1rem;
+  backface-visibility: hidden;
+  visibility: visible;
+  transition: all 2s ease-out;
+}
+.plan-card-preview {
+  transform: rotateY(180deg);
+}
+.plan-card-front.show {
+  transform: rotateY(-180deg);
+}
+.plan-card-preview.show {
+  transform: rotateY(0);
+}
+.plan-card-preview h4 {
+  margin-bottom: 1.5rem;
+}
+.plan-card-preview-head,
+.plan-card-preview-body-head {
+  text-align: center;
+}
+.plan-card-preview-body-form {
+  margin-top: 1rem;
+}
+.plan-card-preview-body-form input,
+.plan-card-preview-body-form select {
+  width: 100%;
+  /* justify-content: space-between; */
+  font-size: 16px;
+  color: rgb(52, 53, 54);
+  white-space: nowrap;
+  padding: 1rem;
+  margin-top: 0.6rem;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(179, 179, 180);
+  transition: border-color 0s ease 0s, box-shadow 250ms ease-in-out 0s;
+  border-radius: 12px;
+}
+.plan-card-preview-body-form .btn {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Plan Invest Modal */
+.plan-invest-area {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #f2f5f6a4;
+  display: flex;
+  z-index: 150;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 500ms ease-in-out;
+  overflow-y: scroll;
+}
+.plan-invest-area.show-modal {
+  opacity: 1;
+  visibility: visible;
+}
+.plan-invest {
+  display: grid;
+  grid-gap: 2rem;
+  background-color: var(--white-color);
+  padding: 1rem;
+  border-radius: 4px;
+  margin: auto;
+  width: 50%;
+  box-shadow: var(--box-shadow);
+}
+.plan-invest-head,
+.heading {
+  text-align: center;
+}
+.plan-invest-body .body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.user-preview p {
+  margin-bottom: 0.5rem;
+  color: var(--text-color2);
+}
+.gen-code {
+  background-color: var(--light-green);
+  padding: 0.2rem;
+  margin-left: 0.2rem;
+  border: none;
+  outline: none;
+  /* font-size: 12px;
+  font-weight: bold; */
+}
+input.gen-code:hover {
+  border: none !important; /* overwrite the general input hover*/
+}
+.plan-invest-body .body img {
+  width: 100px;
+  height: auto;
+  flex-basis: 30%;
+}
+.plan-invest-body .body-details {
+  flex-basis: 60%;
+}
+.body-btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.body-btns .btn {
+  padding: 0.5rem;
+  flex-basis: 45%;
+}
+
+/* Tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Query */
+@media only screen and (max-width: 870px) {
+  .plan-invest {
+    width: 90%;
+  }
+  .plan-invest-body .body {
+    display: flex;
+    flex-direction: column;
+  }
+}
